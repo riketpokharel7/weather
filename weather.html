@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>Weather App</h1>
+      <h4 id="showDate"></h4>
+      <form action="" id="form">
+        <input type="text" id="citys" placeholder="Search city" /><button>
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
+      <br />
+      <img src="images/clear.png" id="icon" />
+      <h2 id="temp">20°C</h2>
+      <p id="text">clear</p>
+      <h3 id="cname"><i class="fa fa-map-marker"></i>Warwick</h3>
+      <hr />
+      <div class="row">
+        <div class="one">
+          <img src="images/image4.png" alt="" />
+          <p id="humidity">66%</p>
+          <p>Humidity</p>
+        </div>
+        <div class="one">
+          <img src="images/image5.png" alt="" />
+          <p id="wind">66%</p>
+
+          <p>Wind Speed</p>
+        </div>
+        <div class="one">
+          <img src="images/image6.png" alt="" />
+          <p id="air">66%</p>
+
+          <p>Air Pressure</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
