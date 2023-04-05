@@ -5,7 +5,6 @@ async function fetchData() {
   const data = await response.json();
   console.log(data);
 
-  const icon = document.querySelector("#icon");
   const cname = document.querySelector("#cname");
   const temp = document.querySelector("#temp");
   const text = document.querySelector("#text");
@@ -24,17 +23,12 @@ async function fetchData() {
   wind.innerHTML = data.wind.speed + "km/h";
   air.innerHTML = data.main.pressure + "mb";
 
-  if (data.weather[0].main == "Clouds") {
-    icon.src = "images/clouds.png";
-  } else if (data.weather[0].main == "Clear") {
-    icon.src = "images/clear.png";
-  } else if (data.weather[0].main == "Rain") {
-    icon.src = "images/rain.png";
-  } else if (data.weather[0].main == "Drizzle") {
-    icon.src = "images/drizzle.png";
-  } else if (data.weather[0].main == "Mist") {
-    icon.src = "images/mist.png";
-  }
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+    );
 }
 fetchData();
 
@@ -50,7 +44,6 @@ form.addEventListener("submit", async function (e) {
   const data = await response.json();
   console.log(data);
 
-  const icon = document.querySelector("#icon");
   const cname = document.querySelector("#cname");
   const temp = document.querySelector("#temp");
   const text = document.querySelector("#text");
@@ -65,15 +58,10 @@ form.addEventListener("submit", async function (e) {
   wind.innerHTML = data.wind.speed + "km/h";
   air.innerHTML = data.main.pressure + "mb";
 
-  if (data.weather[0].main == "Clouds") {
-    icon.src = "images/clouds.png";
-  } else if (data.weather[0].main == "Clear") {
-    icon.src = "images/clear.png";
-  } else if (data.weather[0].main == "Rain") {
-    icon.src = "images/rain.png";
-  } else if (data.weather[0].main == "Drizzle") {
-    icon.src = "images/drizzle.png";
-  } else if (data.weather[0].main == "Mist") {
-    icon.src = "images/mist.png";
-  }
+  document
+    .querySelector("#icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+    );
 });
